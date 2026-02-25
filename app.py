@@ -4,15 +4,98 @@ import streamlit as st
 API_BASE = "https://movie-rec-466x.onrender.com" or "http://127.0.0.1:8000"
 TMDB_IMG = "https://image.tmdb.org/t/p/w500"
 
-st.set_page_config(page_title="Movie Recommender", page_icon="🎬", layout="wide")
+st.set_page_config(page_title="Devflix", page_icon="🎬", layout="wide")
 
 st.markdown(
     """
 <style>
-.block-container { padding-top: 1rem; padding-bottom: 2rem; max-width: 1400px; }
-.small-muted { color:#6b7280; font-size: 0.92rem; }
-.movie-title { font-size: 0.9rem; line-height: 1.15rem; height: 2.3rem; overflow: hidden; }
-.card { border: 1px solid rgba(0,0,0,0.08); border-radius: 16px; padding: 14px; background: rgba(255,255,255,0.7); }
+/* ----------------- Page ----------------- */
+.block-container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    max-width: 1400px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ----------------- Cards ----------------- */
+.card {
+    border-radius: 12px;
+    padding: 10px;
+    background: #142d4c;          /* Slightly lighter navy for cards */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* ----------------- Movie Title ----------------- */
+.movie-title {
+    font-size: 0.95rem;
+    line-height: 1.2rem;
+    height: 2.5rem;
+    overflow: hidden;
+    font-weight: 600;
+    color: #ffdd57;  /* Bright accent color for titles */
+    margin-top: 8px;
+}
+
+/* ----------------- Metadata ----------------- */
+.small-muted {
+    color: #a0aec0;   /* Soft muted text */
+    font-size: 0.85rem;
+}
+
+/* ----------------- Buttons ----------------- */
+.stButton>button {
+    background-color: #6366f1;  /* Purple */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 6px;
+    transition: background-color 0.2s;
+}
+.stButton>button:hover {
+    background-color: #4f46e5;
+}
+
+/* ----------------- Headers ----------------- */
+h1, h2, h3, h4 {
+    color: #e0e7ff;   /* Light header text */
+}
+
+/* ----------------- Divider ----------------- */
+hr {
+    border: 0;
+    border-top: 1px solid #2e3a59;
+    margin: 1rem 0;
+}
+
+/* ----------------- Images ----------------- */
+img {
+    border-radius: 8px;
+}
+
+/* ----------------- Sidebar ----------------- */
+.css-1d391kg { /* Streamlit sidebar container class may vary */
+    background-color: #142d4c !important;  /* Dark sidebar */
+    color: #e0e7ff !important;
+}
+
+/* Sidebar headings */
+.css-1lsmgbg h2 {
+    color: #ffdd57 !important;
+}
+
+/* Sidebar selectbox & slider text */
+.css-1p6f50i, .css-1avcm0n {
+    color: #e0e7ff !important;
+}
 </style>
 """,
     unsafe_allow_html=True,
@@ -184,7 +267,7 @@ with st.sidebar:
     )
     grid_cols = st.slider("Grid columns", 4, 8, 6)
 
-st.title("🎬 Movie Recommender")
+st.title("🎬 Devflix Movie's")
 st.markdown(
     "<div class='small-muted'>Type keyword → dropdown suggestions + matching results → open → details + recommendations</div>",
     unsafe_allow_html=True,
