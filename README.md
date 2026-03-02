@@ -25,7 +25,4 @@ Devflix is a content-based movie recommendation system that allows users to sear
 
 ## 🖥️ Application Preview
 
-(Add your screenshot inside an `assets` folder and update the file path below)
-
-```markdown
 ![Devflix Home](homepage.png)
