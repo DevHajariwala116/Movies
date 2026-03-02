@@ -38,7 +38,7 @@ It’s ideal for learning recommendation systems, Python data manipulation, and 
 
 - Python 3.x  
 - pip (Python package manager)
-
+- A TMDb API key (free to obtain from [TMDb](https://www.themoviedb.org/)) 
 ---
 
 ### 🔧 Installation
