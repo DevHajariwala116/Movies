@@ -23,7 +23,7 @@ It’s ideal for learning recommendation systems, Python data manipulation, and 
 
 ### Features
 
-✔ Accepts a movie title as input  
+>✔ Accepts a movie title as input  
 ✔ Provides a list of movies most similar to the input  
 ✔ Uses pickle serialized models for fast recommendations  
 ✔ Easy to run locally with minimal setup  
@@ -34,7 +34,7 @@ It’s ideal for learning recommendation systems, Python data manipulation, and 
 
 ### 📋 Prerequisites
 
-Make sure you have the following installed on your machine:
+>Make sure you have the following installed on your machine:
 
 - Python 3.x  
 - pip (Python package manager)
