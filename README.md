@@ -1,36 +1,30 @@
-# 🎬 Movies Recommendation System
+# 🎬 Devflix – Movie Recommendation Web App
 
-A **Movie Recommendation System** built in Python using machine learning techniques that suggests similar movies based on a movie selected by the user.  
-This project includes both a Jupyter Notebook for experimentation and a Python backend that can be used in an application.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-red)
+![Machine Learning](https://img.shields.io/badge/ML-TF--IDF-orange)
+![Status](https://img.shields.io/badge/Project-Active-success)
 
----
+> A Netflix-style Movie Recommendation Web Application powered by Machine Learning.
 
-## 🧠 About
-
-This repository contains the source code and data files for a movie recommendation system.  
-It uses **TF-IDF (Term Frequency–Inverse Document Frequency)** and similarity matrices to identify and recommend movies based on plot descriptions or keywords.
-
-The project includes:
-- Interactive Jupyter Notebook (`movies.ipynb`)
-- Python backend modules (`main.py`, `app.py`)
-- Precomputed data files (`df.pkl`, `indices.pkl`, `recommend.pkl`, `tfidf_matrix.pkl`)
-- `requirements.txt` listing required Python libraries
+Devflix is a content-based movie recommendation system that allows users to search for movies, explore trending titles, and receive intelligent recommendations based on similarity algorithms.
 
 ---
 
-## 🚀 Features
+## 🌟 Features
 
-✅ Get movie recommendations based on title similarity  
-✅ Preprocessed data for fast lookup  
-✅ Notebook included for experimentation and visualization  
-✅ Can be extended into web or GUI applications
+- 🎨 Modern Netflix-style dark UI
+- 🔍 Smart search with keyword suggestions
+- 🏠 Trending home feed
+- 🎛 Adjustable grid layout (4–8 columns)
+- 🎬 Movie detail view
+- 🧠 Content-based recommendation engine
+- 🚀 Deploy-ready Streamlit application
 
 ---
 
-## 📦 Installation
+## 🖥️ Application Preview
 
-1. **Clone the repository**
+(Add your screenshot inside an `assets` folder and update the file path below)
 
-```bash
-git clone https://github.com/DevHajariwala116/Movies.git
-cd Movies
+```markdown
