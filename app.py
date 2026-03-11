@@ -12,7 +12,6 @@ st.markdown(
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 
     <style>
-        /* ── Reset & base ── */
         html, body, [data-testid="stAppViewContainer"] {
             background: #080C14 !important;
         }
@@ -27,7 +26,6 @@ st.markdown(
             font-family: 'DM Sans', sans-serif;
         }
 
-        /* ── Ambient noise grain overlay ── */
         [data-testid="stAppViewContainer"]::before {
             content: '';
             position: fixed;
@@ -38,7 +36,6 @@ st.markdown(
             opacity: 0.35;
         }
 
-        /* ── Sidebar ── */
         [data-testid="stSidebar"] {
             background: #0D1520 !important;
             border-right: 1px solid rgba(255,255,255,0.06) !important;
@@ -60,7 +57,6 @@ st.markdown(
             font-size: 1.3rem !important;
         }
 
-        /* Sidebar buttons */
         [data-testid="stSidebar"] .stButton > button {
             background: rgba(255,255,255,0.04) !important;
             border: 1px solid rgba(255,255,255,0.08) !important;
@@ -82,7 +78,6 @@ st.markdown(
             transform: translateX(4px) !important;
         }
 
-        /* ── Main title ── */
         .devflix-title {
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(3rem, 7vw, 6rem);
@@ -106,7 +101,6 @@ st.markdown(
             margin-top: 4px;
         }
 
-        /* ── Search input ── */
         .stTextInput > div > div > input {
             background: rgba(255,255,255,0.04) !important;
             border: 1px solid rgba(255,255,255,0.1) !important;
@@ -129,7 +123,6 @@ st.markdown(
             box-shadow: 0 0 0 3px rgba(224, 176, 74, 0.08) !important;
         }
 
-        /* ── Selectbox ── */
         .stSelectbox > div > div {
             background: rgba(255,255,255,0.04) !important;
             border: 1px solid rgba(255,255,255,0.1) !important;
@@ -137,7 +130,6 @@ st.markdown(
             color: #E8F0FF !important;
         }
 
-        /* ── Section headers ── */
         .section-label {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.6rem;
@@ -157,7 +149,6 @@ st.markdown(
             margin-left: 12px;
         }
 
-        /* ── Movie card ── */
         .movie-card-wrap {
             position: relative;
             border-radius: 14px;
@@ -180,7 +171,6 @@ st.markdown(
                 inset 0 1px 0 rgba(255,255,255,0.08);
         }
 
-        /* ── Uniform poster box: locks every card to the same 2:3 ratio ── */
         .movie-poster-box {
             width: 100%;
             aspect-ratio: 2 / 3;
@@ -201,7 +191,6 @@ st.markdown(
             transform: scale(1.06);
         }
 
-        /* ── Card info area: fixed height so all cards align ── */
         .movie-card-overlay {
             padding: 12px 14px 14px;
             background: linear-gradient(180deg, #0E1825 0%, #0A1019 100%);
@@ -226,7 +215,6 @@ st.markdown(
             text-align: center;
         }
 
-        /* ── Watch Now button (main grid) ── */
         .stButton > button {
             background: linear-gradient(135deg, #E0B04A 0%, #C8882A 100%) !important;
             color: #0A0C10 !important;
@@ -253,19 +241,16 @@ st.markdown(
             transform: translateY(0) !important;
         }
 
-        /* ── Divider ── */
         hr {
             border: 0 !important;
             border-top: 1px solid rgba(255,255,255,0.06) !important;
             margin: 1.5rem 0 !important;
         }
 
-        /* ── Slider ── */
         .stSlider [data-baseweb="slider"] div[role="slider"] {
             background-color: #E0B04A !important;
         }
 
-        /* ── Details page ── */
         .detail-title {
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -313,7 +298,6 @@ st.markdown(
             line-height: 1.8;
         }
 
-        /* ── Alerts ── */
         .stAlert {
             background: rgba(255,255,255,0.03) !important;
             border: 1px solid rgba(255,255,255,0.08) !important;
@@ -321,7 +305,6 @@ st.markdown(
             color: #8A9BB5 !important;
         }
 
-        /* ── Scrollbar ── */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #080C14; }
         ::-webkit-scrollbar-thumb {
@@ -329,12 +312,10 @@ st.markdown(
             border-radius: 4px;
         }
 
-        /* ── Spinner ── */
         .stSpinner > div {
             border-top-color: #E0B04A !important;
         }
 
-        /* ── Back button special style ── */
         .back-btn .stButton > button {
             background: rgba(255,255,255,0.05) !important;
             color: #8A9BB5 !important;
@@ -350,13 +331,11 @@ st.markdown(
             box-shadow: none !important;
         }
 
-        /* ── Poster image on details ── */
         .poster-shadow img {
             border-radius: 16px !important;
             box-shadow: 0 32px 64px rgba(0,0,0,0.8) !important;
         }
 
-        /* ── Hero accent bar ── */
         .hero-accent {
             width: 60px;
             height: 4px;
@@ -365,7 +344,6 @@ st.markdown(
             margin-bottom: 10px;
         }
 
-        /* ── Info pill strip ── */
         .info-strip {
             display: flex;
             gap: 24px;
@@ -378,7 +356,6 @@ st.markdown(
             gap: 4px;
         }
 
-        /* ── Recommendations sub-header ── */
         .rec-subhead {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.78rem;
@@ -394,7 +371,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# ── Session state ──────────────────────────────────────────────────────────────
 if "view" not in st.session_state:
     st.session_state.view = "home"
 if "selected_tmdb_id" not in st.session_state:
@@ -461,7 +437,6 @@ def poster_grid(cards, cols=6, key_prefix="grid"):
             with colset[c]:
                 st.markdown("<div class='movie-card-wrap'>", unsafe_allow_html=True)
 
-                # ── Poster: always 2:3 ratio via .movie-poster-box ──
                 if poster:
                     st.markdown(
                         f"<div class='movie-poster-box'>"
@@ -477,7 +452,6 @@ def poster_grid(cards, cols=6, key_prefix="grid"):
                         unsafe_allow_html=True,
                     )
 
-                # ── Info area: fixed-height title + button ──
                 st.markdown(
                     f"<div class='movie-card-overlay'>"
                     f"<div class='movie-card-title'>{title}</div>"
@@ -556,7 +530,6 @@ def parse_tmdb_search_to_cards(data, keyword: str, limit: int = 24):
     return suggestions, cards
 
 
-# ── Sidebar ────────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown(
         "<div style='padding:0.5rem 0 1.5rem'>"
@@ -623,7 +596,6 @@ with st.sidebar:
     )
 
 
-# ── Page header ───────────────────────────────────────────────────────────────
 if st.session_state.view == "home":
     st.markdown(
         "<div style='margin-bottom:0.2rem'>"
@@ -671,7 +643,6 @@ if st.session_state.view == "home":
                 poster_grid(cards, cols=grid_cols, key_prefix="search_results")
         st.stop()
 
-    # ── Home feed ──────────────────────────────────────────────────────────────
     cat_label = category_options[selected_category].replace("  ", " ")
     st.markdown(
         f"<div class='section-label'>{cat_label}</div>",
@@ -688,7 +659,6 @@ if st.session_state.view == "home":
     poster_grid(home_cards, cols=grid_cols, key_prefix="home_feed")
 
 
-# ── Details view ──────────────────────────────────────────────────────────────
 elif st.session_state.view == "details":
     tmdb_id = st.session_state.selected_tmdb_id
     if not tmdb_id:
@@ -697,7 +667,6 @@ elif st.session_state.view == "details":
             goto_home()
         st.stop()
 
-    # Back button
     st.markdown("<div class='back-btn'>", unsafe_allow_html=True)
     col_back, _ = st.columns([1, 9])
     with col_back:
@@ -712,7 +681,6 @@ elif st.session_state.view == "details":
         st.error(f"Could not load details: {err or 'Unknown error'}")
         st.stop()
 
-    # ── Movie hero block ───────────────────────────────────────────────────────
     if data.get("backdrop_url"):
         st.markdown(
             f"""<div style="
@@ -781,7 +749,6 @@ elif st.session_state.view == "details":
 
     st.markdown("<hr style='margin:2.5rem 0'>", unsafe_allow_html=True)
 
-    # ── Recommendations ────────────────────────────────────────────────────────
     st.markdown("<div class='section-label'>Recommendations</div>", unsafe_allow_html=True)
 
     title = (data.get("title") or "").strip()
